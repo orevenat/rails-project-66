@@ -40,6 +40,7 @@ gem "thruster", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem "image_processing", "~> 1.2"
 
+gem "faraday-retry"
 gem "octokit"
 gem "omniauth"
 gem "omniauth-github"
@@ -86,6 +87,7 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
+  gem "minitest", "~> 5" # issue https://github.com/rails/rails/issues/56406
   gem "minitest-power_assert"
   gem "selenium-webdriver"
 end

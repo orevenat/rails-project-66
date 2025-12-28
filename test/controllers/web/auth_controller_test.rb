@@ -15,7 +15,9 @@ module Web
         uid: "12345",
         info: {
           email: Faker::Internet.email,
-          nickname: Faker::Name.first_name,
+          nickname: Faker::Name.first_name
+        },
+        credentials: {
           token: SecureRandom.hex(55)
         }
       }

@@ -126,6 +126,8 @@ GEM
       logger
     faraday-net_http (3.4.2)
       net-http (~> 0.5)
+    faraday-retry (2.4.0)
+      faraday (~> 2.0)
     ffi (1.17.2-aarch64-linux-gnu)
     ffi (1.17.2-aarch64-linux-musl)
     ffi (1.17.2-arm-linux-gnu)
@@ -196,8 +198,7 @@ GEM
     mini_magick (5.3.1)
       logger
     mini_mime (1.1.5)
-    minitest (6.0.1)
-      prism (~> 1.5)
+    minitest (5.27.0)
     minitest-power_assert (0.3.1)
       minitest
       power_assert (>= 1.1)
@@ -527,12 +528,14 @@ DEPENDENCIES
   debug
   dotenv
   faker
+  faraday-retry
   html2slim
   i18n-debug
   image_processing (~> 1.2)
   jbuilder
   jsbundling-rails
   kamal
+  minitest (~> 5)
   minitest-power_assert
   octokit
   omniauth

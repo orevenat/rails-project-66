@@ -1,0 +1,12 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+DEFAULTS: &DEFAULTS
+  nickname: $LABEL
+  email: $LABEL@email.com
+  token: <%= SecureRandom.hex(55) %>
+
+one:
+  <<: *DEFAULTS
+
+two:
+  <<: *DEFAULTS

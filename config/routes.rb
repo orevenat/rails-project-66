@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -10,5 +12,12 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   # Defines the root path route ("/")
-  # root "posts#index"
+
+  scope module: :web do
+    get "auth/:provider/callback", to: "auth#callback", as: :callback_auth
+    post "auth/:provider", to: "auth#request", as: :auth_request
+    delete "auth/logout"
+
+    root "home#index"
+  end
 end

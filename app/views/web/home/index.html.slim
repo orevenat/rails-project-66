@@ -1,2 +1,6 @@
-h1 Web::Home#index
-p Find me in app/views/web/home/index.html.slim
+.display-4.fw-bold.mb-0 = t('.hello')
+p.mb-4 = t('.hexlet_description')
+
+h2.fw-bold = t('.title')
+p = t('.project_description_html')
+= link_to t('.more'), 'https://ru.hexlet.io/programs/rails/projects/66', class: 'btn btn-primary btn-lg px-4 mt-3 fw-bold'

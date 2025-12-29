@@ -30,7 +30,6 @@ module ActionDispatch
         },
         credentials: {
           token: user.token
-
         }
       }
 

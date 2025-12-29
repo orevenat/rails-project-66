@@ -20,7 +20,7 @@ module Auth
   end
 
   def check_auth!
-    return if current_user
+    return if signed_in?
 
     redirect_back fallback_location: root_path, alert: t("layouts.check_auth_failed")
   end

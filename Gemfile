@@ -40,6 +40,9 @@ gem "thruster", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem "image_processing", "~> 1.2"
 
+gem "dry-auto_inject"
+gem "dry-container"
+gem "enumerize"
 gem "faraday-retry"
 gem "octokit"
 gem "omniauth"
@@ -90,4 +93,5 @@ group :test do
   gem "minitest", "~> 5" # issue https://github.com/rails/rails/issues/56406
   gem "minitest-power_assert"
   gem "selenium-webdriver"
+  gem "webmock"
 end

@@ -1,0 +1,72 @@
+[
+  {
+    "id": 8514,
+    "language": "Ruby",
+    "full_name": "rails/rails",
+    "clone_url": "https://github.com/rails/rails.git",
+    "ssh_url": "git@github.com:rails/rails.git"
+  },
+  {
+    "id": 3083652,
+    "language": "Ruby",
+    "full_name": "jekyll/jekyll",
+    "clone_url": "https://github.com/jekyll/jekyll.git",
+    "ssh_url": "git@github.com:jekyll/jekyll.git"
+  },
+  {
+    "id": 9520,
+    "language": "Ruby",
+    "full_name": "sinatra/sinatra",
+    "clone_url": "https://github.com/sinatra/sinatra.git",
+    "ssh_url": "git@github.com:sinatra/sinatra.git"
+  },
+  {
+    "id": 4901112,
+    "language": "Ruby",
+    "full_name": "puma/puma",
+    "clone_url": "https://github.com/puma/puma.git",
+    "ssh_url": "git@github.com:puma/puma.git"
+  },
+  {
+    "id": 1108034,
+    "language": "Ruby",
+    "full_name": "heartcombo/devise",
+    "clone_url": "https://github.com/heartcombo/devise.git",
+    "ssh_url": "git@github.com:heartcombo/devise.git"
+  },
+  {
+    "id": 2738310,
+    "language": "Ruby",
+    "full_name": "sidekiq/sidekiq",
+    "clone_url": "https://github.com/sidekiq/sidekiq.git",
+    "ssh_url": "git@github.com:sidekiq/sidekiq.git"
+  },
+  {
+    "id": 6156970,
+    "language": "Ruby",
+    "full_name": "rspec/rspec-core",
+    "clone_url": "https://github.com/rspec/rspec-core.git",
+    "ssh_url": "git@github.com:rspec/rspec-core.git"
+  },
+  {
+    "id": 2993456,
+    "language": "Ruby",
+    "full_name": "rubocop/rubocop",
+    "clone_url": "https://github.com/rubocop/rubocop.git",
+    "ssh_url": "git@github.com:rubocop/rubocop.git"
+  },
+  {
+    "id": 109813,
+    "language": "Ruby",
+    "full_name": "capistrano/capistrano",
+    "clone_url": "https://github.com/capistrano/capistrano.git",
+    "ssh_url": "git@github.com:capistrano/capistrano.git"
+  },
+  {
+    "id": 170389,
+    "language": "Ruby",
+    "full_name": "carrierwaveuploader/carrierwave",
+    "clone_url": "https://github.com/carrierwaveuploader/carrierwave.git",
+    "ssh_url": "git@github.com:carrierwaveuploader/carrierwave.git"
+  }
+]

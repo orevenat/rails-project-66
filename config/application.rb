@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative "boot"
 
 require "rails/all"
@@ -15,9 +17,10 @@ module RailsProject66
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
     # Common ones are `templates`, `generators`, or `middleware`, for example.
     config.autoload_lib(ignore: %w[assets tasks])
-
     config.i18n.default_locale = :ru
     config.i18n.available_locales = %i[ru en]
+
+    routes.default_url_options = { host: ENV.fetch("BASE_URL", "localhost") }
 
     # Configuration for the application, engines, and railties goes here.
     #

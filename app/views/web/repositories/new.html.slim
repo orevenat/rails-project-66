@@ -1,0 +1,6 @@
+= content_for :titel do
+  = t('.title')
+
+= simple_form_for @repository do |f|
+  = f.input :github_id, as: :select, collection: @github_repositories, label_method: :full_name, value_method: :id
+  = f.button :submit, class: 'btn btn-success'

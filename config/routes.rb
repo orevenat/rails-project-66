@@ -20,6 +20,10 @@ Rails.application.routes.draw do
 
     root "home#index"
 
-    resources :repositories, only: %i[index show new create destroy]
+    resources :repositories, only: %i[index show new create destroy] do
+      scope module: :repositories do
+        resources :checks, only: %i[show create]
+      end
+    end
   end
 end

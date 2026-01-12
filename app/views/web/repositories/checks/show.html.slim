@@ -1,0 +1,45 @@
+= link_to t('to_repository'), repository_path(@check.repository), class: 'btn btn-primary mb-4'
+
+h1 = t('.title', check_id: @check.id)
+
+table.table
+  tr
+    td = t('.created_at')
+    td = l(@check.created_at, format: :long)
+  tr
+    td = t('.status')
+    td = @check.aasm.human_state
+  tr
+    td = t('.check_passed')
+    td = @check.passed?
+  tr
+    td = t('.issues_count')
+    td = @check_result.dig(:summary, :offense_count)
+  tr
+    td = t('.reference')
+    td = link_to_commit(@check)
+
+
+- if @check.finished? && @check_result
+  table.table.table-hover.mb-5
+    thead
+      tr
+        th = t('.message')
+        th = t('.rule_id')
+        th = t('.line_column')
+    tbody
+      - @check_result[:files].each do |file_record|
+        - if file_record[:offenses].any?
+          tr.table-secondary
+            td colspan="3"
+              = link_to_file_commit_path(@check, file_record[:path])
+          - file_record[:offenses].each do |offense|
+            tr class="offense-#{offense[:severity]}"
+              td = offense[:message]
+              td = offense[:rule]
+              td = offense[:location]
+  .mt-3
+    p
+      strong = t('.summary')
+      | : #{@check_result.dig(:summary, :offense_count)} offenses in #{@check_result.dig(:summary, :target_file_count)} files
+

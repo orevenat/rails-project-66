@@ -9,6 +9,10 @@ class Web::RepositoriesController < Web::ApplicationController
 
   def show
     @repository = current_user.repositories.find(params[:id])
+
+    authorize @repository
+
+    @checks = @repository.checks
   end
 
   def new

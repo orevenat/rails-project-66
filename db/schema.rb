@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2025_12_28_163115) do
+ActiveRecord::Schema[8.1].define(version: 2026_01_12_183943) do
   create_table "repositories", force: :cascade do |t|
     t.string "clone_url"
     t.datetime "created_at", null: false
@@ -24,6 +24,17 @@ ActiveRecord::Schema[8.1].define(version: 2025_12_28_163115) do
     t.index ["user_id"], name: "index_repositories_on_user_id"
   end
 
+  create_table "repository_checks", force: :cascade do |t|
+    t.string "check_log"
+    t.string "commit_id"
+    t.datetime "created_at", null: false
+    t.boolean "passed"
+    t.integer "repository_id", null: false
+    t.string "state"
+    t.datetime "updated_at", null: false
+    t.index ["repository_id"], name: "index_repository_checks_on_repository_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.string "email"
@@ -33,4 +44,5 @@ ActiveRecord::Schema[8.1].define(version: 2025_12_28_163115) do
   end
 
   add_foreign_key "repositories", "users"
+  add_foreign_key "repository_checks", "repositories"
 end

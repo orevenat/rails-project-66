@@ -40,14 +40,18 @@ gem "thruster", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem "image_processing", "~> 1.2"
 
+gem "aasm"
 gem "dry-auto_inject"
 gem "dry-container"
 gem "enumerize"
+gem "git"
 gem "faraday-retry"
 gem "octokit"
 gem "omniauth"
 gem "omniauth-github"
 gem "omniauth-rails_csrf_protection"
+gem "open3"
+gem "pundit"
 gem "rails-i18n"
 gem "simple_form"
 gem "slim-rails"

@@ -5,98 +5,98 @@
 # Rails repository checks
 rails_check1:
   commit_id: "f7c1c5a5b5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a"
-  state: finished
+  aasm_state: finished
   repository: rails_rails
 
 rails_check_2:
   commit_id: "e6b0c4d4a4d4a4d4a4d4a4d4a4d4a4d4a4d4a4d4"
-  state: failed
+  aasm_state: failed
   repository: rails_rails
 
 # Jekyll repository checks
 jekyll_check_1:
   commit_id: "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6"
-  state: checking
+  aasm_state: checking
   repository: jekyll_ruby
 
 jekyll_check_2:
   commit_id: "b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1"
-  state: finished
+  aasm_state: finished
   repository: jekyll_ruby
 
 # Sinatra repository checks
 sinatra_check_1:
   commit_id: "c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2"
-  state: created
+  aasm_state: created
   repository: sinatra_ruby
 
 sinatra_check_2:
   commit_id: "d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3"
-  state: finished
+  aasm_state: finished
   repository: sinatra_ruby
 
 # Puma repository checks
 puma_check_1:
   commit_id: "e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4"
-  state: checking
+  aasm_state: checking
   repository: puma_server
 
 puma_check_2:
   commit_id: "f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5"
-  state: finished
+  aasm_state: finished
   repository: puma_server
 
 # Devise repository checks
 devise_check_1:
   commit_id: "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6"
-  state: failed
+  aasm_state: failed
   repository: devise_auth
 
 devise_check_2:
   commit_id: "b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1"
-  state: finished
+  aasm_state: finished
   repository: devise_auth
 
 # Sidekiq repository checks
 sidekiq_check_1:
   commit_id: "c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2"
-  state: created
+  aasm_state: created
   repository: sidekiq_queue
 
 sidekiq_check_2:
   commit_id: "d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3"
-  state: checking
+  aasm_state: checking
   repository: sidekiq_queue
 
 # RSpec repository checks
 rspec_check_1:
   commit_id: "e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4"
-  state: finished
+  aasm_state: finished
   repository: rspec_testing
 
 rspec_check_2:
   commit_id: "f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5"
-  state: failed
+  aasm_state: failed
   repository: rspec_testing
 
 # Rubocop repository checks
 rubocop_check_1:
   commit_id: "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6"
-  state: finished
+  aasm_state: finished
   repository: rubocop_linter
 
 rubocop_check_2:
   commit_id: "b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1"
-  state: checking
+  aasm_state: checking
   repository: rubocop_linter
 
 # Capistrano repository checks
 capistrano_check_1:
   commit_id: "c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2"
-  state: created
+  aasm_state: created
   repository: capistrano_deploy
 
 capistrano_check_2:
   commit_id: "d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3"
-  state: finished
+  aasm_state: finished
   repository: capistrano_deploy

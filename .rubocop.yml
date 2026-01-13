@@ -69,3 +69,6 @@ Rails/ActionOrder:
 
 Style/Documentation:
   Enabled: false
+
+Naming/PredicateMethod:
+  Enabled: true

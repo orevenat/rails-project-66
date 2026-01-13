@@ -25,7 +25,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_01_12_183943) do
   end
 
   create_table "repository_checks", force: :cascade do |t|
-    t.string "assm_state"
+    t.string "aasm_state"
     t.string "check_log"
     t.string "commit_id"
     t.datetime "created_at", null: false

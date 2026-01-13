@@ -11,7 +11,8 @@ class Api::ChecksController < Api::ApplicationController
 
     check = repository.checks.create!
 
-    CheckRepositoryJob.perform_later(check.id)
+    # CheckRepositoryJob.perform_later(check.id)
+    RepositoryService.check(check)
 
     head :ok
   end

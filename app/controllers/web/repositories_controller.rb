@@ -30,7 +30,8 @@ class Web::RepositoriesController < Web::ApplicationController
     @repository = current_user.repositories.find_or_initialize_by(repository_params)
 
     if @repository.save
-      UpdateRepositoryInfoJob.perform_later(@repository.id)
+      # UpdateRepositoryInfoJob.perform_later(@repository.id)
+      RepositoryService.update_info_from_github(@repository)
       redirect_to repositories_path, notice: t('.success')
     else
       render :new, status: :unprocessable_content, error: @repository.errors.full_messages.join("\n")

@@ -13,7 +13,9 @@ class Web::Repositories::ChecksController < Web::Repositories::ApplicationContro
     authorize repository, :show?
 
     @check = repository.checks.create!
-    CheckRepositoryJob.perform_later(@check.id)
+
+    RepositoryService.check(@check)
+    # CheckRepositoryJob.perform_later(@check.id)
 
     redirect_to repository_path(repository), notice: t('.created')
   end

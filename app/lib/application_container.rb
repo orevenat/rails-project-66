@@ -3,11 +3,7 @@
 class ApplicationContainer
   extend Dry::Container::Mixin
 
-  if Rails.env.production?
-    register :command_runner, -> { CommandRunner }
-    register :git, -> { Git }
-    register :github_client, -> { Octokit::Client }
-  elsif Rails.env.development?
+  if Rails.env.production? || Rails.env.development?
     register :command_runner, -> { CommandRunner }
     register :git, -> { Git }
     register :github_client, -> { Octokit::Client }

@@ -3,7 +3,7 @@
 class GitStub
   class << self
     def clone(_clone_url, _path)
-      true
+      1.present?
     end
   end
 end

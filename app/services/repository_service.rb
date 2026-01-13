@@ -90,7 +90,7 @@ class RepositoryService
     end
 
     def clean_path(path)
-      FileUtils.rm_rf(path) if Dir.exist?(path)
+      FileUtils.rm_rf(path)
     end
   end
 end

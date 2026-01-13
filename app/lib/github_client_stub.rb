@@ -3,6 +3,8 @@
 require 'ostruct'
 
 class GithubClientStub
+  RepositoryStub = Struct.new(:id, :language, :full_name, :clone_url, :ssh_url)
+
   def initialize(*); end
 
   def repo(_github_id)
@@ -16,9 +18,9 @@ class GithubClientStub
   end
 
   def repos(*)
-    content = File.read(Rails.root.join('test/fixtures/files/github_repositories.json'))
+    content = Rails.root.join('test/fixtures/files/github_repositories.json').read
     repositories = JSON.parse(content, symbolize_names: true)
-    repositories.map { |repo| OpenStruct.new(repo) }
+    repositories.map { |repo| RepositoryStub.new(repo) }
   end
 
   def hooks(_repo)

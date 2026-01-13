@@ -1,0 +1,4 @@
+h1 Проверка ##{@check.id} репозитория #{@check.repository.full_name}  завершилась с ошибкой
+
+p Этот текст всё равно никто не прочитает, поэтому просто посмотрите, что случилось
+= link_to 'Link', repository_check_url(@check.repository, @check)

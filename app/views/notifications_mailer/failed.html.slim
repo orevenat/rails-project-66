@@ -1,0 +1,4 @@
+h1 Проверка ##{@check.id} репозитория #{@check.repository.full_name} не прошла
+
+p А это значит, что нужно поправить замечания. Тыкайте по ссылке, там подробный вывод.
+= link_to 'Link', repository_check_url(@check.repository, @check)

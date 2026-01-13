@@ -27,7 +27,16 @@ class RepositoryService
       rescue StandardError => error
         check.fail!
         check.passed = false
+        check.save
         Rails.logger.error(error)
+      end
+
+      if check.failed?
+        NotificationsMailer.with(user: check.repository.user, check:).error.deliver_later
+      elsif check.passed?
+        NotificationsMailer.with(user: check.repository.user, check:).passed.deliver_later
+      else
+        NotificationsMailer.with(user: check.repository.user, check:).failed.deliver_later
       end
     end
 

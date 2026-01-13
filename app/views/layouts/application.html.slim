@@ -2,7 +2,7 @@ doctype html
 html.h-100
   head
     title
-      = content_for(:title) || "Rails Project 66"
+      = content_for(:title) || 'Rails Project 66'
     == csrf_meta_tags
     == csp_meta_tag
 
@@ -21,8 +21,8 @@ html.h-100
     link rel="apple-touch-icon" href="/icon.png"
 
     / Includes all stylesheet files in app/assets/stylesheets
-    = stylesheet_link_tag :app, "data-turbo-track": "reload"
-    = javascript_include_tag "application", "data-turbo-track": "reload", type: "module"
+    = stylesheet_link_tag :app, 'data-turbo-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbo-track': 'reload', type: 'module'
   body.d-flex.flex-column.h-100
 
     = render 'layouts/shared/nav'

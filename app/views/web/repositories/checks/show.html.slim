@@ -14,7 +14,7 @@ table.table
     td = @check.passed?
   tr
     td = t('.issues_count')
-    td = @check_result.dig(:offense_count)
+    td = @check_result[:offense_count]
   tr
     td = t('.reference')
     td = link_to_commit(@check)
@@ -40,5 +40,4 @@ table.table
   .mt-3
     p
       strong = t('.summary')
-      | : #{@check_result.dig(:offense_count)} offenses in #{@check_result.dig(:summary, :target_file_count)} files
-
+      | : #{@check_result[:offense_count]} offenses in #{@check_result.dig(:summary, :target_file_count)} files

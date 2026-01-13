@@ -33,13 +33,16 @@ production:
     adapter: postgresql
     encoding: unicode
     url: <%= ENV['DATABASE_CACHE_URL'] || ENV['DATABASE_URL'] %>
+    schema_format: ruby
   queue:
     <<: *default
     adapter: postgresql
     encoding: unicode
     url: <%= ENV['DATABASE_QUEUE_URL'] || ENV['DATABASE_URL'] %>
+    schema_format: ruby
   cable:
     <<: *default
     adapter: postgresql
     encoding: unicode
     url: <%= ENV['DATABASE_CABLE_URL'] || ENV['DATABASE_URL'] %>
+    schema_format: ruby

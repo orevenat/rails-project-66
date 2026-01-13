@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require "test_helper"
+require 'test_helper'
 
 class Api::ChecksControllerTest < ActionDispatch::IntegrationTest
-  test "create" do
+  test 'create' do
     repository = repositories(:carrierwave_upload)
 
     payload = {

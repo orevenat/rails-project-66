@@ -10,7 +10,7 @@ class Web::ApplicationController < ApplicationController
   private
 
   def not_authorized
-    flash[:alert] = t("flash.not_authorized")
+    flash[:alert] = t('flash.not_authorized')
     redirect_to root_path
   end
 end

@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 # # frozen_string_literal: true
 
 class CheckLogFormat
   class << self
     def format(json_string, language)
-      result = JSON.parse(json_string.presence || "{}", symbolize_names: true)
+      result = JSON.parse(json_string.presence || '{}', symbolize_names: true)
 
       if result.empty?
         return {
@@ -12,9 +14,9 @@ class CheckLogFormat
       end
 
       case language
-      when "ruby"
+      when 'ruby'
         format_rubocop(result)
-      when "javascript"
+      when 'javascript'
         format_eslint(result)
       else
         raise "Unhandled language for format #{language}"
@@ -67,7 +69,7 @@ class CheckLogFormat
 
       {
         files: files,
-        offense_count: result.dig("summary", "offense_count"),
+        offense_count: result.dig('summary', 'offense_count'),
         summary: result[:summary],
         metadata: result[:metadata]
       }

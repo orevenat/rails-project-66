@@ -22,6 +22,6 @@ module Auth
   def check_auth!
     return if signed_in?
 
-    redirect_back fallback_location: root_path, alert: t("layouts.check_auth_failed")
+    redirect_back fallback_location: root_path, alert: t('layouts.check_auth_failed')
   end
 end

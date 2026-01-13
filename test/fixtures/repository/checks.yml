@@ -3,7 +3,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 # Rails repository checks
-rails_check_1:
+rails_check1:
   commit_id: "f7c1c5a5b5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a"
   state: finished
   repository: rails_rails

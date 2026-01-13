@@ -10,7 +10,7 @@ class NotificationsMailer < ApplicationMailer
     @user = params[:user]
     @check = params[:check]
 
-    mail(to: @user.email, subject: t(".subject"))
+    mail(to: @user.email, subject: t('.subject'))
   end
 
   # Subject can be set in your I18n file at config/locales/en.yml
@@ -22,7 +22,7 @@ class NotificationsMailer < ApplicationMailer
     @user = params[:user]
     @check = params[:check]
 
-    mail(to: @user.email, subject: t(".subject"))
+    mail(to: @user.email, subject: t('.subject'))
   end
 
   # Subject can be set in your I18n file at config/locales/en.yml
@@ -34,6 +34,6 @@ class NotificationsMailer < ApplicationMailer
     @user = params[:user]
     @check = params[:check]
 
-    mail(to: @user.email, subject: t(".subject"))
+    mail(to: @user.email, subject: t('.subject'))
   end
 end

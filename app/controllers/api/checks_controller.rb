@@ -2,9 +2,9 @@
 
 class Api::ChecksController < Api::ApplicationController
   def create
-    repository = Repository.find_by(full_name: params["repository"]["full_name"])
+    repository = Repository.find_by(full_name: params['repository']['full_name'])
 
-    if !repository
+    unless repository
       head :not_found
       return
     end

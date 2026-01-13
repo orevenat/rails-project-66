@@ -12,10 +12,10 @@ class Repository < ApplicationRecord
   validates :github_id, presence: true
 
   def display_name
-    name || "-"
+    name || '-'
   end
 
   def temp_repository_path
-    File.join(Dir.tmpdir, "repositories", full_name)
+    File.join(Dir.tmpdir, 'repositories', full_name)
   end
 end

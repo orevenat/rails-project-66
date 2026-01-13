@@ -6,7 +6,7 @@ class GitUtils
       command = "cd #{repository_path.shellescape} && git rev-parse HEAD"
       output, exit_status = command_runner.execute(command)
 
-      if !exit_status.zero?
+      unless exit_status.zero?
         check.check_log = "Error when find commit_id. Status: #{exit_status}"
         raise
       end

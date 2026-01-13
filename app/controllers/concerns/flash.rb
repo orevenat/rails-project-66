@@ -28,13 +28,13 @@ module Flash
     lookup_controller = controller
     lookup_action = action
 
-    while lookup_controller.superclass.name != "ActionController::Base"
+    while lookup_controller.superclass.name != 'ActionController::Base'
       lookup_key = []
-      lookup_key << lookup_controller.controller_path.tr("/", ".")
+      lookup_key << lookup_controller.controller_path.tr('/', '.')
       lookup_key << lookup_action
       lookup_key << type
 
-      keys << lookup_key.join(".").to_sym
+      keys << lookup_key.join('.').to_sym
 
       lookup_controller = lookup_controller.superclass
       lookup_action = :base

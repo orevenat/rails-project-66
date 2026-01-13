@@ -5,7 +5,7 @@ class CheckRepositoryJob < ApplicationJob
 
   def perform(check_id)
     check = Repository::Check.find(check_id)
-    return if !check.created?
+    return unless check.created?
 
     RepositoryService.check(check)
   end

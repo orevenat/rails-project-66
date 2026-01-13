@@ -3,7 +3,7 @@
 class CommandRunnerStub
   class << self
     def execute(_command)
-      [ "", 0 ]
+      ['', 0]
     end
   end
 end

@@ -15,6 +15,6 @@ class Web::Repositories::ChecksController < Web::Repositories::ApplicationContro
     @check = repository.checks.create!
     CheckRepositoryJob.perform_later(@check.id)
 
-    redirect_to repository_path(repository), notice: t(".created")
+    redirect_to repository_path(repository), notice: t('.created')
   end
 end

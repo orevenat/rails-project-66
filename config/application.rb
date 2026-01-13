@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative "boot"
+require_relative 'boot'
 
-require "rails/all"
+require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -20,7 +20,7 @@ module RailsProject66
     config.i18n.default_locale = :ru
     config.i18n.available_locales = %i[ru en]
 
-    routes.default_url_options = { host: ENV.fetch("BASE_URL", "localhost") }
+    routes.default_url_options = { host: ENV.fetch('BASE_URL', 'localhost') }
 
     # Configuration for the application, engines, and railties goes here.
     #

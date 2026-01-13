@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
-require "test_helper"
+require 'test_helper'
 
 module Web
   class HomeControllerTest < ActionDispatch::IntegrationTest
-    test "index" do
+    test 'index' do
       get root_path
       assert_response :success
     end
 
-    test "#index with auth" do
+    test '#index with auth' do
       user = users(:one)
       sign_in(user)
 

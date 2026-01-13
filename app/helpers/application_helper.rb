@@ -4,18 +4,18 @@ module ApplicationHelper
   include Auth
 
   def link_to_file_commit_path(check, file_path)
-    relative_path = file_path.sub(check.repository.temp_repository_path.to_s, "").sub(/^\//, "")
+    relative_path = file_path.sub(check.repository.temp_repository_path.to_s, '').sub(%r{^/}, '')
 
     url = "https://github.com/#{check.repository.full_name}/blob/#{check.commit_id}/#{relative_path}"
 
     link_to relative_path, url,
-            target: "_blank",
-            rel: "noopener noreferrer",
+            target: '_blank',
+            rel: 'noopener noreferrer',
             title: relative_path
   end
 
   def link_to_commit(check)
-    return unless check.commit_id.present?
+    return if check.commit_id.blank?
 
     commit_sha = check.commit_id
     short_sha = commit_sha[0..6] # First 7 chars
@@ -23,6 +23,6 @@ module ApplicationHelper
 
     url = "https://github.com/#{repo_full_name}/commit/#{short_sha}"
 
-    link_to short_sha, url, target: "_blank", rel: "noopener noreferrer"
+    link_to short_sha, url, target: '_blank', rel: 'noopener noreferrer'
   end
 end

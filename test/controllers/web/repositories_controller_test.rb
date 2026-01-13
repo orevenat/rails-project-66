@@ -1,7 +1,9 @@
-require "test_helper"
+# frozen_string_literal: true
+
+require 'test_helper'
 
 class Web::RepositoriesControllerTest < ActionDispatch::IntegrationTest
-  test "#index" do
+  test '#index' do
     user = users(:one)
     sign_in(user)
 
@@ -11,7 +13,7 @@ class Web::RepositoriesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "#show" do
+  test '#show' do
     user = users(:one)
     sign_in(user)
     repository = repositories(:rails_rails)
@@ -20,7 +22,7 @@ class Web::RepositoriesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "#new" do
+  test '#new' do
     user = users(:one)
     sign_in(user)
 
@@ -28,7 +30,7 @@ class Web::RepositoriesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "#create" do
+  test '#create' do
     user = users(:one)
     sign_in(user)
 

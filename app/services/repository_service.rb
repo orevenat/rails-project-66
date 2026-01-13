@@ -24,11 +24,11 @@ class RepositoryService
         check.save!
 
         check.finish!
-      rescue StandardError => error
+      rescue StandardError => e
         check.fail!
         check.passed = false
         check.save
-        Rails.logger.error(error)
+        Rails.logger.error(e)
       end
 
       if check.failed?
@@ -70,7 +70,7 @@ class RepositoryService
           content_type: :json
         },
         {
-          events: [ :push ],
+          events: [:push],
           active: true
         }
       )
@@ -80,9 +80,9 @@ class RepositoryService
 
     def map_command(repository)
       case repository.language
-      when "ruby"
+      when 'ruby'
         "bundle exec rubocop #{repository.temp_repository_path} --format=json --config ./.rubocop.yml"
-      when "javascript"
+      when 'javascript'
         "node_modules/eslint/bin/eslint.js #{repository.temp_repository_path} --format=json --config ./.eslintrc.yml  --no-eslintrc"
       else
         raise "Unhandled language for check #{repository.language}"

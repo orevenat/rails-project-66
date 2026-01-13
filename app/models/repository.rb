@@ -3,7 +3,7 @@
 class Repository < ApplicationRecord
   extend Enumerize
 
-  enumerize :language, in: %i[ruby]
+  enumerize :language, in: %i[ruby javascript]
 
   belongs_to :user
 

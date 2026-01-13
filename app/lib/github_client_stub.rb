@@ -20,4 +20,10 @@ class GithubClientStub
     repositories = JSON.parse(content, symbolize_names: true)
     repositories.map { |repo| OpenStruct.new(repo) }
   end
+
+  def hooks(_repo)
+    []
+  end
+
+  def create_hook(_repo, _name, _config, _options); end
 end

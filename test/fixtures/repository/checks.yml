@@ -100,14 +100,3 @@ capistrano_check_2:
   commit_id: "d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3"
   state: finished
   repository: capistrano_deploy
-
-# Carrierwave repository checks
-carrierwave_check_1:
-  commit_id: "e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4"
-  state: failed
-  repository: carrierwave_upload
-
-carrierwave_check_2:
-  commit_id: "f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5"
-  state: finished
-  repository: carrierwave_upload

@@ -96,7 +96,7 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
-  gem 'minitest', '~> 5' # issue https://github.com/rails/rails/issues/56406
+  gem 'minitest', '~> 6' # issue https://github.com/rails/rails/issues/56406
   gem 'minitest-power_assert'
   gem 'selenium-webdriver'
   gem 'webmock'
